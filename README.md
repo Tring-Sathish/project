@@ -13,7 +13,8 @@ Backend / Server start command:
 Frontend / Client start command: 
 ```bash
   npm run dev
-  
+  ```
+
 # Smart Cruiter
 An applicant tracking management system, help organization in their hiring process with futures like:
 
