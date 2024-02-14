@@ -13,7 +13,7 @@ const VerifyMail = async (req, res, next) => {
         await findUser.save();
         const html = `   
         <html><head><title>Verified</title>     
-        </head>       <body>         <h1 style="color:#1E90FF; , textAlign:'center'">           Email verification completed, you can login now.<br/><a href="http://localhost:3000">Go to Home</a></h1></body></html>
+        </head>       <body>         <h1 style="color:#1E90FF; , textAlign:'center'">           Email verification completed, you can login now.<br/><a href="http://localhost:5173">Go to Home</a></h1></body></html>
         `;
         res.send(html);
     } catch (e) {

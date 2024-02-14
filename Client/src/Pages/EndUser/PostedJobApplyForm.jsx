@@ -144,6 +144,7 @@ function PostedJobApplyForm() {
         }
       })
       .catch((e) => {
+        console.log("E",e)
         setLoading(false);
         alert("kindly fill the complete form ");
       });
@@ -334,7 +335,7 @@ function PostedJobApplyForm() {
           />
         </div>
         {/* ~~~~~ PROFILE PIC UPLOAD UI CODE  ~~~~~~~~*/}
-        <div className="mt-2 flex justify-center m-auto p-4 items-center bg-transparent shadow-md cursor-pointer h-1/2 rounded-md">
+        <div className="mt-2 flex justify-center m-auto p-4 items-center bg-transparent shadow-md cursor-pointer h-1/2 rounded-md" style={{marginRight: "1%", marginTop: "-15%"}}>
           <div
             className="border bg-transparent border-gray-400 border-dashed rounded-md p-4 flex flex-col items-center justify-center
             hover:bg-gray-100
@@ -644,8 +645,8 @@ function PostedJobApplyForm() {
             <option disabled selected className="text-gray-700">
               Under / Post Grad
             </option>
-            <option>B.S</option>
-            <option>M.S</option>
+            <option>B.Sc</option>
+            <option>M.Sc</option>
             <option>Ph.D</option>
           </select>
         </div>
@@ -862,7 +863,7 @@ function PostedJobApplyForm() {
 
           <input
             type="number"
-            placeholder="2k19"
+            placeholder="2024"
             maxLength={4}
             required
             value={educationSessionInformation.first.from}
@@ -890,7 +891,7 @@ function PostedJobApplyForm() {
 
           <input
             type="number"
-            placeholder="2k19"
+            placeholder="2024"
             maxLength={4}
             required
             className="input  input-bordered w-20"
@@ -1189,8 +1190,8 @@ function PostedJobApplyForm() {
                   <option disabled selected className="text-gray-700">
                     Under / Post Grad
                   </option>
-                  <option>B.S</option>
-                  <option>M.S</option>
+                  <option>B.Sc</option>
+                  <option>M.Sc</option>
                   <option>Ph.D</option>
                 </select>
               </div>
@@ -1449,7 +1450,7 @@ function PostedJobApplyForm() {
                       },
                     }));
                   }}
-                  placeholder="2k19"
+                  placeholder="2024"
                   className="input  input-bordered w-20"
                 />
               </div>
@@ -1468,7 +1469,7 @@ function PostedJobApplyForm() {
 
                 <input
                   type="text"
-                  placeholder="2k23"
+                  placeholder="2024"
                   className="input  input-bordered w-20"
                   value={educationSessionInformation.second.to}
                   onChange={(e) => {
@@ -1765,8 +1766,8 @@ function PostedJobApplyForm() {
                   <option disabled selected className="text-gray-700">
                     Under / Post Grad
                   </option>
-                  <option>B.S</option>
-                  <option>M.S</option>
+                  <option>B.Sc</option>
+                  <option>M.Sc</option>
                   <option>Ph.D</option>
                 </select>
               </div>
@@ -2015,7 +2016,7 @@ function PostedJobApplyForm() {
 
                 <input
                   type="text"
-                  placeholder="2k19"
+                  placeholder="2024"
                   className="input  input-bordered w-20"
                   value={educationSessionInformation.third.from}
                   onChange={(e) => {
@@ -2044,7 +2045,7 @@ function PostedJobApplyForm() {
 
                 <input
                   type="text"
-                  placeholder="2k23"
+                  placeholder="2024"
                   className="input  input-bordered w-20"
                   value={educationSessionInformation.third.to}
                   onChange={(e) => {
@@ -2108,7 +2109,7 @@ function PostedJobApplyForm() {
             </div>
 
             <div className="ml-16">
-              <label className="label line1">Duration (/Years)</label>
+              <label className="label line1">Duration (Years)</label>
               <input
                 type="number"
                 className="h-10 input input-bordered w-1/2"
@@ -2116,7 +2117,7 @@ function PostedJobApplyForm() {
                 name="year"
                 min={0}
                 autoComplete="on"
-                placeholder="0.6 / 5 -- In Years"
+                placeholder="In Years"
                 onChange={(e) => {
                   setProfessionalInformation((prevState) => ({
                     ...prevState,
@@ -2165,7 +2166,7 @@ function PostedJobApplyForm() {
               </div>
 
               <div className="ml-16">
-                <label className="label line1">Duration (/Years)</label>
+                <label className="label line1">Duration (Years)</label>
                 <input
                   type="number"
                   className="h-10 input input-bordered w-1/2"
@@ -2173,7 +2174,7 @@ function PostedJobApplyForm() {
                   name="year"
                   min={0}
                   autoComplete="on"
-                  placeholder="0.6 / 5 -- In Years"
+                  placeholder="In Years"
                 />
               </div>
 
@@ -2258,7 +2259,7 @@ function PostedJobApplyForm() {
             id="text"
             name="linkedin profile"
             autoComplete="on"
-            placeholder="linkedin.com/Humza-Sajid"
+            placeholder="linkedin.com"
             onChange={(e) => {
               setContactInformation((old) => ({
                 ...old,
@@ -2277,7 +2278,7 @@ function PostedJobApplyForm() {
             id="text"
             name="linkedin profile"
             autoComplete="on"
-            placeholder="github.com/META"
+            placeholder="github.com"
             onChange={(e) => {
               setContactInformation((old) => ({
                 ...old,
@@ -2288,7 +2289,7 @@ function PostedJobApplyForm() {
           />
         </div>
 
-        <div className="mt-4 flex justify-center m-auto p-4 items-center bg-transparent shadow-md cursor-pointer h-1/2 rounded-md">
+        <div className="mt-4 flex justify-center m-auto p-4 items-center bg-transparent shadow-md cursor-pointer h-1/2 rounded-md" style={{marginTop: "-5.5%",}}>
           <div
             className="border bg-transparent border-gray-400 border-dashed rounded-md p-4 flex flex-col items-center justify-center
             hover:bg-gray-100

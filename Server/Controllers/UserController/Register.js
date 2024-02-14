@@ -3,6 +3,9 @@ const bcrypt = require("bcrypt");
 const express = require("express");
 const mailer = require("nodemailer");
 const app = express();
+const dotenv = require('dotenv');
+
+dotenv.config(); 
 
 
 // -> Email sending code

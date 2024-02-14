@@ -44,7 +44,7 @@ function Setting_EditProfile() {
       formData.append("userId", org_id); // Replace userId with the actual user ID
 
       axios
-        .post("http://localhost:3000/settings/updateProfile", formData)
+        .post("http://localhost:8080/settings/updateProfile", formData)
         .then((response) => {
           console.log(response.data);
         })
@@ -101,6 +101,7 @@ function Setting_EditProfile() {
         console.error(error);
       });
   };
+  const org_id = localStorage.getItem("organization_id");
   return (
     <div className="flex bg-white">
       <div className="hidden sm:block w-2/12 bg-white h-screen">
@@ -111,20 +112,20 @@ function Setting_EditProfile() {
           <TopNavigationBar title={"Settings"} />
         </div>
 
-        <h2 className="p-6 mt-12 text-center font-medium heading2b">
-          Update Your Organization Details
+        <h2 className="p-6 mt-12 text-center font-medium heading2b">{ org_id ?
+          "Update Your Organization Details" : "Update Your Details" }
         </h2>
 
         <div className="w-4/5 m-auto">
-          <h2 className="heading3 mb-4">Update Logo</h2>
+          <h2 className="heading3 mb-4">{ org_id ? "Update Logo" : "Update Profile Pic" }</h2>
 
-          <form action=""></form>
+          <form action="">
           <input
             type="file"
             accept="image/*"
             onChange={handleFileChange}
             className="file-input file-input-bordered w-full max-w-xs"
-          />
+          /></form>
         </div>
         <button
           onClick={updateProfilePic}
@@ -132,6 +133,7 @@ function Setting_EditProfile() {
         >
           UPDATE
         </button>
+        {org_id && <div>
         <div className="p-6 mt-2 w-4/5 m-auto">
           <h2 className="heading3 mb-4">Basic</h2>
           <label className="label">
@@ -345,6 +347,7 @@ function Setting_EditProfile() {
         >
           UPDATE
         </button>
+      </div>}
       </div>
     </div>
   );

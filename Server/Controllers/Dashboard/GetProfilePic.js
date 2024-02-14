@@ -3,7 +3,6 @@ const OrganizationModal = require("../../Models/Organization_Model");
 const GetProfilePicture = async (req, res) => {
 
     const organization_id = req.body.organization_id
-
     const organizaion = await OrganizationModal.findById(organization_id);
     if (organizaion) {
         const { logo } = organizaion;

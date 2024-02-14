@@ -38,7 +38,7 @@ function Login() {
 
     axios(options)
       .then((response) => {
-        console.log(response);
+        console.log("res",response);
         if (response.status == 200) {
           //1st store the Token for authorization
 
@@ -48,7 +48,7 @@ function Login() {
         }
       })
       .catch(function (error) {
-        console.log(error);
+        console.log("error",error);
         //USING ALL EDGE CASES TO SHOW RELEVENT MESSSAGES ON INPUT
         if (error.response.status == 404) {
           SetError("No user found");
@@ -131,7 +131,7 @@ function Login() {
                 ) : null}
               </div>
               <div className="flex justify-start mt-8">
-                <div className="hidden sm:block">
+                {/* <div className="hidden sm:block">
                   <input
                     type="checkbox"
                     // checked="checked"
@@ -140,7 +140,7 @@ function Login() {
                   <label htmlFor="" className="ml-2 line2">
                     keep me login
                   </label>
-                </div>
+                </div> */}
 
                 <div className=" ml-0  sm:ml-24">
                   <Link to={"/forgetpwd"} className="line1 cursor-pointer">
@@ -177,7 +177,7 @@ function Login() {
                 Signup
               </Link>
             </h4>
-            <div>
+            {/* <div>
               <h4 className="inline line2 text-secondrytext ml-0 sm:ml-12">
                 Explore Jobs?
                 <Link
@@ -187,7 +187,7 @@ function Login() {
                   View
                 </Link>
               </h4>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* 2nd Div */}
